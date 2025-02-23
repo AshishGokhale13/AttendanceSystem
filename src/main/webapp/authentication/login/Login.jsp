@@ -131,7 +131,7 @@ $("button").click(function(event){
 				  }).then((result)=>{
 					  if(result.isConfirmed)
 						  {
-						  location.href="/AttendanceSystem/admin/Index.jsp"
+						  location.href="/AttendanceSystem/admin/home/Index.jsp"
 						  }
 				  });
 				}

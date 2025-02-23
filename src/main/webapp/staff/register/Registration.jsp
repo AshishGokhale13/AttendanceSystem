@@ -1,28 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%
-String role = request.getParameter("role");
-String roleDb = request.getParameter("role");
-if (role == null ) {
-%>
-<script>
-	location.href = "../comingSoon/ComingSoon.jsp"
-</script>
-<%
-} else if (role.equals("STAFF"))
-role = "Staff";
-else if (role.equals("TEACHER"))
-role = "Teacher";
-else if (role.equals("STUDENT"))
-role = "Student";
-else {
-%>
-<script>
-	location.href = "../comingSoon/ComingSoon.jsp"
-</script>
-<%
-}
-%>
+
 <!DOCTYPE html>
 <html>
 <!-- Head section start -->
@@ -47,7 +25,7 @@ else {
 					<div class="col-md-12" data-select2-id="select2-data-17-024q">
 						<div class="card" data-select2-id="select2-data-16-u5rh">
 							<div class="card-header">
-								<h5 class="card-title"><%=role%>
+								<h5 class="card-title">
 									Registration Form
 								</h5>
 							</div>
@@ -63,9 +41,7 @@ else {
 											</div>
 
 
-											<%
-											if (roleDb.equals("STUDENT")) {
-											%>
+											
 
 											<div class="row">
 												<div class="col-6">
@@ -83,30 +59,22 @@ else {
 
 											</div>
 
-											<%
-											} else {
-											%>
-
 
 											<div class="mb-3">
 												<label class="form-label">Password:</label> <input
 													type="password" class="form-control">
 											</div>
-											<%
-											}
-											%>
-											<div class="mb-3" data-select2-id="select2-data-11-qswi">
-												<label class="form-label">State:</label> <select
-													class="select select2-hidden-accessible"
-													data-select2-id="select2-data-4-72cr" tabindex="-1"
-													aria-hidden="true">
-													<option data-select2-id="select2-data-6-0zu1">Select
-														State</option>
-													<option value="1" data-select2-id="select2-data-24-za0f">Maharashtra</option>
-													<!-- <option value="2" data-select2-id="select2-data-25-4fac">Texas</option>
-													<option value="3" data-select2-id="select2-data-26-i02t">Florida</option> -->
-												</select>
-											</div>
+											
+										
+										
+											
+											
+											<jsp:include page="./role.jsp"></jsp:include>
+										
+										
+											
+											
+											
 											
 											<div class="mb-3" data-select2-id="select2-data-11-qswi">
 												<label class="form-label">State:</label> <select
